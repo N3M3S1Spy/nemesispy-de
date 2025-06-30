@@ -1,10 +1,106 @@
 body {
     background-color: #161617;
+    padding-top: 60px;
 }
 
-.sectioin-heading {
+.navbar {
+    position: fixed;        /* fixiert die Navbar */
+    top: 0;                 /* ganz oben */
+    left: 0;
+    right: 0;
+    height: 112px;
+    background-color: #121213;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 1000;          /* damit Navbar über allem anderen liegt */
+  }
+  
+  /* Abstand zwischen Links */
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: #919190;
+    text-decoration: none;
+    font-weight: 800;
     font-family: 'Inter', sans-serif;
-    font-size: 50px;
+    font-size: 16px;
+  }
+  
+  .nav-links a:hover {
+    color: #fbfafa;
+  }
+
+.section-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 33px;
     color: #FEFFFE;
-    font-style: bold;
+    
 }
+
+.vorstellung {
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    width: 637px;
+    height: 619px;
+    gap: 36px;
+}
+
+.gelbeschrift {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #DAB03C;
+    font-weight: 800;
+
+}
+
+.logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 33px;
+    color: #FEFFFE;
+    font-weight: 800;
+    
+
+}
+
+.bigImNemsis {
+    font-size: 60px;
+    color: #FEFFFE;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
+.keywordtext {
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    color: #4C5464;
+
+}
+
+.contact-button {
+    background-color: #E2B53E;   /* Hintergrundfarbe */
+    color: black;                /* Textfarbe */
+    border: none;                /* Kein Rahmen */
+    padding: 12px 30px;          /* Innenabstand */
+    border-radius: 6px;          /* Abgerundete Ecken */
+    font-size: 25px;             /* Schriftgröße */
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    cursor: pointer;             /* Mauszeiger wird zur Hand */
+    transition: background-color 0.3s ease; /* sanfter Übergang bei Hover */
+}
+
+.mein-bild {
+    position: absolute;
+    top: 150px;
+    left: 1152px;
+    width: 600px;
+    height: auto;
+  }
+  
