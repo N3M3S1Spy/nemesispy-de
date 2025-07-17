@@ -1,32 +1,211 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href=".favicon.ico">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Nemesis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-white min-h-screen flex">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-gray-900 border-r border-gray-800 p-6 hidden md:block">
+    <h1 class="text-2xl font-bold mb-8 text-cyan-400">Nemesis</h1>
+    <nav class="space-y-4">
+      <a href="#about" class="block text-gray-300 hover:text-cyan-300">Über Mich</a>
+      <a href="#research" class="block text-gray-300 hover:text-cyan-300">Forschung</a>
+      <a href="#contact" class="block text-gray-300 hover:text-cyan-300">Kontakt</a>
+      <a href="#tools" class="block text-gray-300 hover:text-cyan-300">Tools</a>
+      <a href="ctf-writeups.html" class="block text-gray-300 hover:text-cyan-300">CTF Writeups</a>
+    </nav>
+  </aside>
 
-    <title>About Me | nemesispy</title>
-    </head>
-    <body>
-        <header class="navbar">
-            <div class="logo">Hi! I'm Nemesispy!</div>
-            <nav class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
-              </nav>
-        </header>
-        
-        <div class="vorstellung">
-            <p class="gelbeschrift">Hello and Welcome!</p>
-            <h1 class="bigImNemsis">I am<br>Nemesispy</h1>
-            <p class="keywordtext">Ethical Hacking, IT-Forensics, Capture The Flag (CTF), Low-Level Programming and vulnerability analysis</p>
-            <button class="contact-button">Contact</button>
+  <!-- Main Content -->
+  <main class="flex-1 px-6 py-12 overflow-y-auto">
+    <section id="about" class="mb-24">
+      <h2 class="text-3xl font-bold mb-4 text-cyan-400">Über Mich</h2>
+      <p class="text-lg text-gray-300 leading-relaxed">
+        Ich bin Nemesis, unabhängiger Cybersicherheitsforscher mit Fokus auf Windows-Interna, AV-Evasion-Techniken und low-level C++-Entwicklung.
+        Mein Hintergrund liegt in der Analyse von Malware-Mechanismen, dem Aufbau von Testnetzwerken zur Simulation von Angriffsszenarien und der Entwicklung eigener Tools zur Forensik und Überwachung.
+      </p>
+      <p class="mt-4 text-gray-400">
+        Als Autist mit ausgeprägtem analytischen Denken arbeite ich besonders tiefgehend, dokumentiere präzise und halte mein Wort unter allen Umständen.
+        Mein Ziel: Sicherheitsmechanismen nicht nur zu verstehen, sondern besser zu machen.
+      </p>
+    </section>
+
+    <section id="research" class="mb-24">
+      <h2 class="text-3xl font-bold mb-4 text-cyan-400">Forschung & Projekte</h2>
+      <ul class="space-y-6">
+        <li class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-cyan-500 transition">
+          <h3 class="text-xl font-semibold">VEHTrigger</h3>
+          <p class="text-gray-300 mt-2">
+            Entwicklung eines stealthy Shellcode-Executors unter Windows mithilfe von vectored exception handling (VEH) und PAGE_NOACCESS-Technik.
+          </p>
+        </li>
+        <li class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-cyan-500 transition">
+          <h3 class="text-xl font-semibold">ShadowCopyMonitor</h3>
+          <p class="text-gray-300 mt-2">
+            Tool zur Überwachung und forensischen Analyse von Volume Shadow Copies unter Windows 10+.
+          </p>
+        </li>
+        <li class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-cyan-500 transition">
+          <h3 class="text-xl font-semibold">RemoteAuditLite</h3>
+          <p class="text-gray-300 mt-2">
+            Minimalistisches C++-Tool zur systemweiten Überwachung mit verschlüsselter Webserver-Kommunikation. Entwickelt für kontinuierliches Monitoring im Testnetz.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="tools" class="mb-24">
+      <h2 class="text-3xl font-bold mb-4 text-cyan-400">Interaktive Tools</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-cyan-500 transition">
+          <h3 class="text-xl font-semibold">System Fingerprint Tool</h3>
+          <p class="text-gray-400 mt-2">Erfasst OS-Version, Architektur, Netzwerkstatus direkt im Browser.</p>
+          <button onclick="alert(navigator.userAgent)" class="mt-4 px-4 py-2 bg-cyan-500 text-black font-semibold rounded hover:bg-cyan-400">Jetzt Testen</button>
         </div>
-        <img src="./img/logo.png" alt="Logo" width="600" height="600" style="max-width: 90vw; height: auto;" class="mein-bild"/>
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-cyan-500 transition">
+          <h3 class="text-xl font-semibold">Base64 Decoder</h3>
+          <p class="text-gray-400 mt-2">Kleines Tool zur sicheren Online-Entschlüsselung von Base64-Daten.</p>
+          <input type="text" id="b64input" class="w-full mt-4 p-2 bg-gray-800 text-white rounded" placeholder="Base64 eingeben...">
+          <button onclick="decodeBase64()" class="mt-2 px-4 py-2 bg-cyan-500 text-black font-semibold rounded hover:bg-cyan-400">Dekodieren</button>
+          <p id="b64output" class="mt-2 text-green-400"></p>
+        </div>
+      </div>
+    </section>
 
-    </body>
+    <section id="contact">
+      <h2 class="text-3xl font-bold mb-4 text-cyan-400">Kontakt</h2>
+      <p class="text-gray-300">
+      Für seriöse Anfragen, technische Diskussionen oder Zusammenarbeit:
+      </p>
+      <ul class="mt-4 text-gray-400 space-y-2">
+        <li>E-Mail: <span class="text-white">info[at]nemesispy.de</span></li>
+        <li>PGP-Key: <code class="text-sm"><br>
+      </ul>
+
+      <div class="relative inline-block max-w-full mt-2">
+        <button
+          id="copyButton"
+          onclick="copyPGP()"
+          class="absolute top-2 right-2 text-xs bg-cyan-600 text-white px-2 py-1 rounded hover:bg-cyan-700 transition"
+        >
+          Copy
+        </button>
+
+        <pre class="bg-gray-900 text-green-300 p-4 rounded overflow-auto text-sm whitespace-pre-wrap break-words">
+      <code id="pgpKey">
+      -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+      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
+      =du+M
+      -----END PGP PUBLIC KEY BLOCK-----
+      </code>
+        </pre>
+      </div>
+
+      <div class="mt-4">
+        <a
+          href="/pgp/nemesis.asc"
+          download
+          class="text-cyan-300 hover:underline text-sm"
+        >
+        PGP-Schlüssel herunterladen
+        </a>
+      </div>
+
+
+    </section>
+
+<footer class="text-center text-gray-600 text-sm py-6 border-t border-gray-800 mt-24">
+  &copy; 2025 Nemesis – Cybersecurity Researcher ·
+  <a href="/impressum.html" class="text-cyan-400 hover:underline">Impressum</a>
+</footer>
+
+  </main>
+
+  <script>
+    function decodeBase64() {
+      const input = document.getElementById("b64input").value;
+      try {
+        const decoded = atob(input);
+        document.getElementById("b64output").innerText = decoded;
+      } catch (e) {
+        document.getElementById("b64output").innerText = "Ungültige Base64-Eingabe.";
+      }
+    }
+
+    function copyPGP() {
+      const text = document.getElementById("pgpKey").innerText;
+      const button = document.getElementById("copyButton");
+      
+      navigator.clipboard.writeText(text).then(() => {
+        // Temporäre Textänderung
+        const originalText = button.innerText;
+        button.innerText = "Kopiert";
+        button.classList.remove("bg-cyan-600");
+        button.classList.add("bg-green-600")
+        // Nach 1,5 Sekunden zurück
+        setTimeout(() => {
+          button.innerText = originalText;
+          button.classList.remove("bg-green-600");
+          button.classList.add("bg-cyan-600");
+        }, 1500);
+      });
+    }
+  </script>
+</body>
 </html>
