@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hall of Badges – Nemesis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Optional: sanfter Hover-Effekt auf Badges */
+    .badge-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(6, 182, 212, 0.5);
+    }
+    .badge-container {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-200 font-sans antialiased">
+
+  <div class="min-h-screen flex flex-col">
+
+    <header class="py-10 px-6 max-w-5xl mx-auto">
+      <h1 class="text-4xl font-extrabold text-cyan-400 mb-4">Hall of Badges</h1>
+      <p class="max-w-3xl text-gray-400">
+        Übersicht meiner Badges, von der Platform TryHackMe.
+      </p>
+    </header>
+
+    <main class="flex-grow max-w-6xl mx-auto px-6 pb-16">
+
+      <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+        <!-- Beispiel Badge 1 -->
+        <div class="badge-container overflow-hidden rounded-lg shadow-lg bg-gray-900 cursor-pointer">
+          <img
+            src="badges/6e69813050514187da3c9a845b184fbf.png"
+            alt="Badge 1"
+            class="w-full h-auto object-contain"
+            loading="lazy"
+            style="aspect-ratio: 700 / 362;"
+          />
+        </div>
+
+        <!-- Beispiel Badge 2 -->
+        <div class="badge-container overflow-hidden rounded-lg shadow-lg bg-gray-900 cursor-pointer">
+          <img
+            src="badges/c887abdb73c903cf3049977b558fe0d7.png"
+            alt="Netzwerk Grundlagen"
+            class="w-full h-auto object-contain"
+            loading="lazy"
+            style="aspect-ratio: 700 / 362;"
+          />
+        </div>
+
+        <!-- Beispiel Badge 3 -->
+        <div class="badge-container overflow-hidden rounded-lg shadow-lg bg-gray-900 cursor-pointer">
+          <img
+            src="badges/d9a8f69bd7e1dc0b1cb1fa0ae8f0a379.png"
+            alt="Badge 3"
+            class="w-full h-auto object-contain"
+            loading="lazy"
+            style="aspect-ratio: 700 / 362;"
+          />
+        </div>
+
+        <!-- Füge weitere Badges nach gleichem Muster hinzu -->
+
+      </section>
+
+    </main>
+
+    <footer class="text-left text-gray-600 text-xs py-6 border-t border-gray-800 px-6 select-none max-w-6xl mx-auto">
+      &copy; 2025 Nemesis – <a href="/" class="text-cyan-400 hover:underline">Zurück zur Startseite</a>
+    </footer>
+
+  </div>
+
+</body>
+</html>
